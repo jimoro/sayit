@@ -31,3 +31,5 @@ gem 'turbolinks'
 gem 'listen'
 # Prompted to install during rspec test failure
 gem 'rails-controller-testing'
+
+gem 'bootstrap-sass'
