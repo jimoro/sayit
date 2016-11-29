@@ -8,7 +8,7 @@
     <h4>Name: <%= @user.name %></h4>
     <table>
       <tr>
-        <td><%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success' %></td>
+        <td><%= button_to "Yes", {controller: "users", action: "create", params: params[:user]}, class: 'btn btn-success' %></td>
         <td>&nbsp &nbsp &nbsp &nbsp</td>
         <td><%= button_to "No", {controller: "users", action: "new"}, class: 'btn' %></td>
       </tr>
