@@ -1,0 +1,17 @@
+<h2>Sign Up Confirmation</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <h3>Are you sure these values are correct?</h4>
+    <br>
+    <h4>Email: <%= @user.email %></h4>
+    <h4>Name: <%= @user.name %></h4>
+    <table>
+      <tr>
+        <td><%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success' %></td>
+        <td>&nbsp &nbsp &nbsp &nbsp</td>
+        <td><%= button_to "No", {controller: "users", action: "new"}, class: 'btn' %></td>
+      </tr>
+    </table>
+  </div>
+</div>
