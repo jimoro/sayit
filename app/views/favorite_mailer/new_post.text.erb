@@ -1,0 +1,5 @@
+Favorited new post of "<%= @post.title %>"
+
+<%= @post.body %>
+
+Visit online at: <%= topic_post_url(@post.topic, @post, anchor: "post-#{@post.id}") %>
