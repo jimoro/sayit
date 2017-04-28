@@ -15,23 +15,27 @@
           <% if @user.posts.count > 0 %>
             <%= pluralize(@user.posts.count, 'post') %>,
           <% else %>
-            {user.name} has not submitted any posts yet.
+            <%= @user.name %> has not submitted any posts yet. <br />
           <% end %>
 
           <% if @user.comments.count > 0 %>
             <%= pluralize(@user.comments.count, 'comment') %>
           <% else %>
-            {user.name} has not submitted any comments yet.
+            <%= @user.name %> has not submitted any comments yet.
           <% end %>
-          
+
         </small>
       </div>
     </div>
   </div>
 </div>
 
-<h2>Posts</h2>
-<%= render @user.posts %>
+<% if @user.posts.count > 0 %>
+  <h2>Posts</h2>
+  <%= render @user.posts %>
+<% end %>
 
-<h2>Comments</h2>
-<%= render @user.comments %>
+<% if @user.comments.count > 0 %>
+  <h2>Comments</h2>
+  <%= render @user.comments %>
+<% end %>
