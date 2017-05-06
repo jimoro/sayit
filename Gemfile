@@ -7,12 +7,13 @@ gem 'rails', '5.0.0.1'
 # #1
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+#  gem 'rails_12factor'
 end
 
 # #2
 group :development do
   gem 'sqlite3'
+#  gem 'pg'
 end
 
 group :development, :test do
