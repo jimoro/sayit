@@ -1,2 +1,63 @@
-<h1>Welcome#about</h1>
-<p>Find me in app/views/welcome/about.html.erb</p>
+<h1>About Sāyit</h1>
+
+<p><strong>Sāyit is a simple community discussion site</strong> with a responsive design suitable for mobile use. Features include multiple user role/permission levels, topic areas, posts, comments, favoriting of posts, and up or down -voting of posts (essentially expressing ‘liking’ or ‘disliking’ of posts).</p>
+
+<ul>
+<li>Visitors: Can browse and read discussion topics, posts, and comments</li>
+<li>Members: Can also create posts and comments, and can edit &amp; delete the posts and comments which they created</li>
+<li>Administrators: Can also create topics and delete any content</li>
+</ul>
+
+
+<p><strong>App Status</strong> <br>
+
+<p>All features are fully functional, as described above. Please let me know if you experience any problems. </p>
+
+<p><em>Please sign up for an account and create new Posts and/or Comments!</em></p>
+
+<p>Note that the initial content of Users, Topics, Posts, and Comments were inserted by "seeding" the database with random text. That content has been left in place for the time being for demonstrating what it looks like when populated. I'll remove those posts whenever there's enough "real" content posted to replace it.</p>
+
+<hr>
+
+<h3>Just for us geeks...</h3>
+
+<p>The data model relationships look like this:</p>
+
+<ul>
+<li>Users have many Posts, Comments, Votes, and Favorites </li>
+<li>Topics have many Posts</li>
+<li>Posts have many Comments, Votes, and Favorites</li>
+<li>Posts belong to Users and Topics</li>
+<li>Comments belong to Users and Posts</li>
+<li>Favorites belong to Users and Posts</li>
+<li>Votes belong to Users and Posts</li>
+</ul>
+
+<p>Input data validation is performed by the ActiveRecord ORM for all user input fields.</p>
+
+<hr>
+
+<p><strong>Technology Used</strong></p>
+
+<ul>
+<li>Ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]</li>
+<li>Rails 5.0.0.1</li>
+<li>Dev database: sqlite3 3.16.0</li>
+<li>Production database: Postgres 9.5.4 (Heroku)</li>
+<li>Rspec 3.5.4</li>
+<li>Bootstrap (Bootstrap-SASS) 3.3.7</li>
+<li>Bcrypt for password encryption</li>
+<li>Gravatar for members’ profile pictures (avatar)</li>
+<li>SendGrid for email notification of comment post events</li>
+<li>Figaro for secure management of SendGrid credentials</li>
+<li>FactoryGirl to generate Users, Topics, and Posts for development testing</li>
+</ul>
+
+<hr>
+
+<p></p>
+<blockquote>
+  <p style="font-size: 60%">Copyright &copy;
+    2017
+  Jim Rohrer</p>
+</blockquote>

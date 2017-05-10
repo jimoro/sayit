@@ -1,6 +1,6 @@
-Bloccit
+Sāyit
 --------
- [Deployed on Heroku at https://rohrer-bloccit.herokuapp.com](https://rohrer-bloccit.herokuapp.com/)
+ [Deployed on Heroku at https://jimoro-sayit.herokuapp.com](https://jimoro-sayit.herokuapp.com/)
 
  **A simple community discussion site** with a responsive design suitable for mobile use. Features include multiple user role/permission levels, topic areas, posts, comments, favoriting of posts, and up or down -voting of posts (essentially expressing 'liking' or 'disliking' of posts).
 
@@ -32,14 +32,20 @@ Input data validation is performed by the ActiveRecord ORM for all user input fi
  - Rspec 3.5.4
  - Bootstrap (Bootstrap-SASS) 3.3.7
  - Bcrypt for password encryption
+ - Gravatar for members' profile pictures (avatar)
+ - SendGrid for email notification of comment post events
+ - Figaro for secure management of SendGrid credentials
+ - FactoryGirl to generate Users, Topics, and Posts for development testing
 
 
 ----------
 
 **App Status**
-All features are fully functional. Please note that most of the content of Topics, Posts, and Comments were inserted using the `rake db:seed` (actually `rails db:seed` since this is running on Rails 5).
-
 Please feel free to sign up for an account and create new Posts and/or Comments!
+
+All features are fully functional, as described above. Please let me know if you experience any problems.
+
+Note that most of the content of Topics, Posts, and Comments were inserted using the `rake db:seed` (actually `rails db:seed` since this is running on Rails 5).
 
 
 > Written with [StackEdit](https://stackedit.io/).
